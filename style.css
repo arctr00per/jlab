@@ -1,4 +1,32 @@
-body {
+* {
   margin: 0;
-  font-family: sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 16.67vw;
+  height: 16.67vw;
+  object-fit: cover;
+}
+
+.label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.5vw;
+  margin-top: 1em;
 }
