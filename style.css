@@ -24,7 +24,7 @@ body {
   font-weight: bold;
   font-size: 2.5vw;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 a {
@@ -37,7 +37,7 @@ img {
   height: 16.67vw;
   object-fit: cover;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 13px;
 }
 
 .nav-item {
