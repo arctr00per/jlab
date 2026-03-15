@@ -16,17 +16,83 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-img {
-  width: 16.67vw;
-  height: 16.67vw;
-  object-fit: cover;
+  text-align: center;
 }
 
 .label {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 2.5vw;
-  margin-top: 1em;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  width: 16.67vw;
+  height: 16.67vw;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.nav-item {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.5vw;
+  color: transparent;
+  -webkit-text-stroke: 1.5px black;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  line-height: 1;
+  margin-bottom: 4px;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  color: black;
+}
+
+/* about page */
+
+.wip {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.5vw;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px black;
+  transition: color 0.15s ease;
+  cursor: default;
+}
+
+.wip:hover {
+  color: black;
+}
+
+.back {
+  position: fixed;
+  top: 1.5vw;
+  left: 1.5vw;
+  display: block;
+  width: 2.5vw;
+  height: 2.5vw;
+}
+
+.back svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: black;
+  stroke-width: 1.5px;
+  transition: fill 0.15s ease;
+}
+
+.back:hover svg {
+  fill: none;
+  stroke: black;
 }
