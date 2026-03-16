@@ -24,12 +24,13 @@ body {
   font-weight: bold;
   font-size: 2.5vw;
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 a {
   display: block;
   text-decoration: none;
+  margin-bottom: 8px;
 }
 
 img {
@@ -37,7 +38,6 @@ img {
   height: 16.67vw;
   object-fit: cover;
   display: block;
-  margin-bottom: 13px;
 }
 
 .nav-item {
@@ -56,8 +56,6 @@ img {
 .nav-item:hover {
   color: black;
 }
-
-/* about page */
 
 .wip {
   font-family: Helvetica, Arial, sans-serif;
@@ -95,4 +93,30 @@ img {
 .back:hover svg {
   fill: none;
   stroke: black;
+}
+
+@media (max-width: 1000px) {
+  img {
+    width: 167px;
+    height: 167px;
+  }
+
+  .label {
+    font-size: 25px;
+  }
+
+  .nav-item {
+    font-size: 25px;
+  }
+
+  .wip {
+    font-size: 25px;
+  }
+
+  .back {
+    width: 25px;
+    height: 25px;
+    top: 12px;
+    left: 12px;
+  }
 }
