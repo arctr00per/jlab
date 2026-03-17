@@ -38,6 +38,7 @@ img {
   height: 16.67vw;
   object-fit: cover;
   display: block;
+  margin-bottom: 8px;
 }
 
 .nav-item {
