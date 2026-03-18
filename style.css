@@ -30,13 +30,27 @@ body {
 a {
   display: block;
   text-decoration: none;
-  margin-bottom: 8px;
 }
 
 img {
   width: 16.67vw;
   height: 16.67vw;
   object-fit: cover;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.about-img {
+  width: 16.67vw;
+  height: 16.67vw;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.about-img-free {
+  width: 16.67vw;
+  height: auto;
   display: block;
   margin-bottom: 8px;
 }
@@ -67,6 +81,7 @@ img {
   -webkit-text-stroke: 1.5px black;
   transition: color 0.15s ease;
   cursor: default;
+  margin-bottom: 8px;
 }
 
 .wip:hover {
@@ -97,9 +112,16 @@ img {
 }
 
 @media (max-width: 1000px) {
-  img {
+  img, .about-img, .about-img-free {
     width: 167px;
+  }
+
+  .about-img {
     height: 167px;
+  }
+
+  .about-img-free {
+    height: auto;
   }
 
   .label {
