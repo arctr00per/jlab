@@ -31,6 +31,11 @@ body {
   z-index: 5;
 }
 
+body.page-about .site-credit,
+body.page-work .site-credit {
+  display: none;
+}
+
 .label {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
