@@ -19,6 +19,18 @@ body {
   text-align: center;
 }
 
+.site-credit {
+  position: fixed;
+  bottom: 1.5vw;
+  width: 100%;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .75vw;
+  line-height: 1;
+  color: black;
+  z-index: 5;
+}
+
 .label {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -169,7 +181,7 @@ body.page-about {
   filter: grayscale(0%);
 }
 
-.video-wrapper > div,
+.video-wrapper>div,
 .video-wrapper iframe {
   position: absolute;
   top: 0;
@@ -206,7 +218,7 @@ body.page-about {
   margin-bottom: 0;
 }
 
-.image-grid > img,
+.image-grid>img,
 .image-grid a img {
   width: 100%;
   height: auto;
@@ -259,7 +271,7 @@ body.page-about {
 .sf-item img {
   height: 9vw;
   width: auto;
-  max-width: 22vw;
+  max-width: 15vw;
   aspect-ratio: unset;
   object-fit: contain;
   display: block;
@@ -280,11 +292,46 @@ body.page-about {
 /* WORK PAGE */
 
 body.page-work {
+  display: block;
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.work-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  flex-direction: column;
+  margin-top: calc(50vh - 30vh);
+}
+
+.work-header {
+  margin-bottom: .5vw;
+  margin-left: calc(50vw - 50vh + 26vh);
+}
+
+.work-client {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.5vw;
+  line-height: 1;
+  color: black;
+}
+
+.work-title {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.5vw;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px black;
+  text-decoration: none;
+  display: inline;
+  transition: color 0.15s ease;
+}
+
+.work-title:hover {
+  color: black;
 }
 
 .carousel {
@@ -294,7 +341,7 @@ body.page-work {
   gap: 8px;
   overflow-x: auto;
   overflow-y: hidden;
-  height: 35vh;
+  height: 50vh;
   padding: 0 4vw;
   scrollbar-width: none;
 }
@@ -310,6 +357,37 @@ body.page-work {
   object-fit: contain;
   flex-shrink: 0;
   margin-bottom: 0;
+}
+
+.carousel a {
+  display: flex;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.carousel a img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 0;
+  aspect-ratio: unset;
+}
+
+.carousel-spacer {
+  flex-shrink: 0;
+  width: calc(50vw - 30vh);
+}
+
+.work-text {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.25vw;
+  line-height: 1.5;
+  color: black;
+  width: 25vw;
+  text-align: justify;
+  margin-top: 0.5vw;
+  margin-left: calc(50vw - 50vh + 26.3vh);
 }
 
 @media (max-width: 1000px) {
