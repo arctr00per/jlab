@@ -263,13 +263,13 @@ body.page-about {
 .starfield {
   position: relative;
   width: 75vw;
-  height: 37.5vw;
+  height: 42vw;
   overflow: visible;
 }
 
 #starfield-vision,
 #starfield-more {
-  height: 37.5vw;
+  height: 48vw;
 }
 
 .sf-item {
