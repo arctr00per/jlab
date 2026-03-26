@@ -27,12 +27,15 @@
       <img src="images/work/Overdye%20Winter%20Sale%20Continued%202025.png" alt="Overdye Winter Sale Continued 2025">
       <img src="images/work/Overdye%20Winter%20Sale%20Continued%202025%20OOH%20Render.png" alt="Overdye Winter Sale Continued OOH Render">
     </div>
-  </body>
+
     <script>
-    const carousel = document.querySelector('.carousel');
-    carousel.addEventListener('wheel', function(e) {
-      e.preventDefault();
-      carousel.scrollLeft += e.deltaY;
-    }, { passive: false });
-  </script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var carousel = document.querySelector('.carousel');
+        carousel.addEventListener('wheel', function(e) {
+          e.preventDefault();
+          carousel.scrollLeft += e.deltaY;
+        }, { passive: false });
+      });
+    </script>
+  </body>
 </html>
