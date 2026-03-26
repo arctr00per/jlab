@@ -25,10 +25,20 @@ body {
   width: 100%;
   text-align: center;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: .75vw;
+  font-size: 0.78125vw;
   line-height: 1;
   color: black;
   z-index: 5;
+}
+
+.site-credit a {
+  display: inline;
+  color: black;
+  text-decoration: none;
+}
+
+.site-credit a:hover {
+  text-decoration: underline;
 }
 
 body.page-about .site-credit,
@@ -120,7 +130,7 @@ body.page-about {
   display: block;
   height: auto;
   min-height: 100vh;
-  padding-top: calc(50vh - 12vw);
+  padding-top: 20vh;
   padding-bottom: 6vw;
 }
 
@@ -143,8 +153,7 @@ body.page-about {
   font-weight: bold;
   font-size: 2.5vw;
   line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1.5px black;
+  color: black;
   margin-bottom: 0.5vw;
   text-align: left;
   width: 25vw;
@@ -163,7 +172,6 @@ body.page-about {
 
 .section-media {
   width: 75vw;
-  margin-bottom: 5vw;
 }
 
 .video-grid {
@@ -256,7 +264,6 @@ body.page-about {
   position: relative;
   width: 75vw;
   height: 37.5vw;
-  margin-bottom: 5vw;
   overflow: visible;
 }
 
@@ -292,6 +299,28 @@ body.page-about {
 
 .sf-item:hover img {
   transform: scale(1.08);
+}
+
+.some-more-grid {
+  display: flex;
+  flex-direction: row;
+  gap: .5vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.some-more-grid a {
+  display: block;
+  margin-bottom: 0;
+}
+
+.some-more-grid a img {
+  height: 18.75vw;
+  width: auto;
+  aspect-ratio: unset;
+  object-fit: contain;
+  margin-bottom: 0;
+  display: block;
 }
 
 /* WORK PAGE */
@@ -400,6 +429,10 @@ body.page-work {
     width: 167px;
     aspect-ratio: 1;
     height: auto;
+  }
+
+  .site-credit {
+    font-size: 7.8px;
   }
 
   .label {
