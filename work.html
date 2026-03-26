@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-LAB — Work</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/home/jackie.jpg">
+  </head>
+  <body class="page-work">
+    <a class="back" href="index.html">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <line x1="20" y1="12" x2="4" y2="12"></line>
+        <polyline points="10 18 4 12 10 6"></polyline>
+      </svg>
+    </a>
+    <div class="carousel">
+      <img src="images/work/Overdye%20Summer%20Sale%202025.JPG" alt="Overdye Summer Sale 2025">
+      <img src="images/work/Overdye%20Moving%20Sale%202026.png" alt="Overdye Moving Sale 2026">
+      <img src="images/work/Overdye%20Consignment%20Wanted%202025.png" alt="Overdye Consignment Wanted 2025">
+      <img src="images/work/Overdye%20Consignment%20Wanted%202025%20OOH%20Render.png" alt="Overdye Consignment Wanted OOH Render">
+      <img src="images/work/Overdye%20Holiday%20Giveaway%202025%20Slide%201.png" alt="Overdye Holiday Giveaway Slide 1">
+      <img src="images/work/Overdye%20Holiday%20Giveaway%202025%20Slide%202.png" alt="Overdye Holiday Giveaway Slide 2">
+      <img src="images/work/Overdye%20Holiday%20Giveaway%202025%20Slide%203.png" alt="Overdye Holiday Giveaway Slide 3">
+      <img src="images/work/Overdye%20Holiday%20Giveaway%202025%20Slide%204.png" alt="Overdye Holiday Giveaway Slide 4">
+      <img src="images/work/Overdye%20Winter%20Sale%202025.png" alt="Overdye Winter Sale 2025">
+      <img src="images/work/Overdye%20Winter%20Sale%20Continued%202025.png" alt="Overdye Winter Sale Continued 2025">
+      <img src="images/work/Overdye%20Winter%20Sale%20Continued%202025%20OOH%20Render.png" alt="Overdye Winter Sale Continued OOH Render">
+    </div>
+  </body>
+    <script>
+    const carousel = document.querySelector('.carousel');
+    carousel.addEventListener('wheel', function(e) {
+      e.preventDefault();
+      carousel.scrollLeft += e.deltaY;
+    }, { passive: false });
+  </script>
+</html>

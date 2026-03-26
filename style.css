@@ -34,23 +34,8 @@ a {
 
 img {
   width: 16.67vw;
-  height: 16.67vw;
+  aspect-ratio: 1;
   object-fit: cover;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.about-img {
-  width: 16.67vw;
-  height: 16.67vw;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.about-img-free {
-  width: 16.67vw;
-  height: auto;
   display: block;
   margin-bottom: 8px;
 }
@@ -95,6 +80,7 @@ img {
   display: block;
   width: 2.5vw;
   height: 2.5vw;
+  z-index: 10;
 }
 
 .back svg {
@@ -111,16 +97,225 @@ img {
   stroke: black;
 }
 
+/* ABOUT PAGE */
+
+body.page-about {
+  display: block;
+  height: auto;
+  min-height: 100vh;
+  padding-top: calc(50vh - 12vw);
+  padding-bottom: 6vw;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5vw;
+  overflow: hidden;
+}
+
+.section-title {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.5vw;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px black;
+  margin-bottom: 0.5vw;
+  text-align: left;
+  width: 25vw;
+}
+
+.section-text {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.25vw;
+  line-height: 1.5;
+  color: black;
+  width: 25vw;
+  margin-bottom: 5vw;
+  text-align: justify;
+}
+
+.section-media {
+  width: 75vw;
+  margin-bottom: 5vw;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
+  width: 75vw;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.video-wrapper:hover {
+  filter: grayscale(0%);
+}
+
+.video-wrapper > div,
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  margin-bottom: 0;
+  aspect-ratio: unset;
+}
+
+.video-wrapper:hover .video-thumb {
+  display: none;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8vw, 1fr));
+  gap: 2px;
+}
+
+.image-grid a {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.image-grid > img,
+.image-grid a img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: unset;
+  object-fit: contain;
+  margin-bottom: 0;
+  display: block;
+}
+
+.single-image {
+  width: 37.5vw;
+}
+
+.single-image a {
+  display: block;
+  margin-bottom: 0;
+}
+
+.single-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: unset;
+  object-fit: contain;
+  margin-bottom: 0;
+}
+
+/* STARFIELD */
+
+.starfield {
+  position: relative;
+  width: 75vw;
+  height: 37.5vw;
+  margin-bottom: 5vw;
+  overflow: visible;
+}
+
+#starfield-vision,
+#starfield-more {
+  height: 37.5vw;
+}
+
+.sf-item {
+  position: absolute;
+  display: block;
+  margin: 0;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.sf-item img {
+  height: 9vw;
+  width: auto;
+  max-width: 22vw;
+  aspect-ratio: unset;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+#starfield-vision .sf-item img,
+#starfield-more .sf-item img {
+  height: 13.5vw;
+  max-width: 33vw;
+}
+
+.sf-item:hover img {
+  transform: scale(1.08);
+}
+
+/* WORK PAGE */
+
+body.page-work {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 35vh;
+  padding: 0 4vw;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel img {
+  height: 100%;
+  width: auto;
+  aspect-ratio: unset;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
 @media (max-width: 1000px) {
-  img, .about-img, .about-img-free {
+  img {
     width: 167px;
-  }
-
-  .about-img {
-    height: 167px;
-  }
-
-  .about-img-free {
+    aspect-ratio: 1;
     height: auto;
   }
 
