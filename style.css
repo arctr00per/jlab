@@ -453,4 +453,84 @@ body.page-work {
     top: 12px;
     left: 12px;
   }
+
+  /* ABOUT */
+  .section-title {
+    font-size: 22px;
+    width: 80vw;
+  }
+
+  .section-text {
+    font-size: 14px;
+    width: 80vw;
+  }
+
+  .section-media {
+    width: 90vw;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    width: 90vw;
+  }
+
+  .single-image {
+    width: 80vw;
+  }
+
+  .starfield {
+    width: 90vw;
+    height: 60vw;
+  }
+
+  .sf-item img {
+    height: 18vw;
+    max-width: 40vw;
+  }
+
+  #starfield-vision .sf-item img,
+  #starfield-more .sf-item img {
+    height: 26vw;
+    max-width: 60vw;
+  }
+
+  .some-more-grid a img {
+    height: 40vw;
+  }
+
+  /* WORK */
+  .work-client,
+  .work-title {
+    font-size: 22px;
+  }
+
+  .work-text {
+    font-size: 14px;
+    width: 80vw;
+    margin-left: 4vw;
+  }
+
+  .work-header {
+    margin-left: 4vw;
+  }
+
+  body.page-about {
+    padding-top: 6vw;
+  }
+
+  .work-content {
+    margin-top: 6vw;
+  }
+
+  .back {
+    display: none;
+  }
+
+  #starfield-commerce {
+    height: 100vw;
+  }
+
+  #starfield-vision {
+    height: 110vw;
+  }
 }
