@@ -424,6 +424,16 @@ body.page-work {
   margin-left: calc(50vw - 50vh + 26.3vh);
 }
 
+.email-link {
+  display: inline;
+  color: black;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1000px) {
   img {
     width: 167px;
