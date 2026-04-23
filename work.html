@@ -61,13 +61,66 @@
     I worked with the team on illustrations and graphics for ad campaigns designed to surface those stories and connect
     with customers who care as deeply about provenance as they do about the clothes themselves.</p>
 
+  <div class="work-content work-content-next">
+    <div class="work-header">
+      <span class="work-client">CLIENT: </span><a class="work-title" href="https://www.tiktok.com/@drakemoschkau"
+        target="_blank">DRAKE MOSCHKAU</a>
+    </div>
+  </div>
+
+  <div class="carousel" id="carousel-drake">
+    <div class="carousel-spacer"></div>
+    <img class="lightbox-trigger" src="images/work/Drake%20Revuelto%201.jpeg" alt="Drake Revuelto 1">
+    <img class="lightbox-trigger" src="images/work/Drake%20Revuelto%202.png" alt="Drake Revuelto 2">
+    <img class="lightbox-trigger" src="images/work/Drake%20Revuelto%203.png" alt="Drake Revuelto 3">
+    <img class="lightbox-trigger" src="images/work/Drake%20Revuelto%204.png" alt="Drake Revuelto 4">
+    <img class="lightbox-trigger" src="images/work/Drake%20Revuelto%205.png" alt="Drake Revuelto 5">
+    <img class="lightbox-trigger" src="images/work/Drake%20Revuelto%206.png" alt="Drake Revuelto 6">
+    <img class="lightbox-trigger" src="images/work/Drake%20Revuelto%207.jpeg" alt="Drake Revuelto 7">
+    <img class="lightbox-trigger" src="images/work/Drake%20Revuelto%208.png" alt="Drake Revuelto 8">
+    <img class="lightbox-trigger" src="images/work/Drake%20Revuelto%209.png" alt="Drake Revuelto 9">
+    <div class="carousel-spacer"></div>
+  </div>
+
+  <p class="work-text">
+  <p class="work-text">Drake Moschkau is an automotive content creator with over 650k followers across TikTok,
+    Instagram, and YouTube. He works with car brands to share high-quality, informative content with viewers. For this
+    project, he had the chance to drive and review the 2025 Lamborghini Revuelto, a stunning hybrid super sports car.
+  </p>
+  </p>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&#x2715;</span>
+    <img class="lightbox-img" id="lightbox-img">
+  </div>
+
   <script>
     window.addEventListener('load', function () {
-      var carousel = document.querySelector('.carousel');
-      carousel.addEventListener('wheel', function (e) {
-        e.preventDefault();
-        carousel.scrollLeft += e.deltaY;
-      }, { passive: false });
+      var carousels = document.querySelectorAll('.carousel');
+      carousels.forEach(function (carousel) {
+        carousel.addEventListener('wheel', function (e) {
+          e.preventDefault();
+          carousel.scrollLeft += e.deltaY;
+        }, { passive: false });
+      });
+
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+
+      document.querySelectorAll('.lightbox-trigger').forEach(function (img) {
+        img.addEventListener('click', function () {
+          lightboxImg.src = img.src;
+          lightbox.classList.add('active');
+        });
+      });
+
+      document.querySelector('.lightbox-close').addEventListener('click', function () {
+        lightbox.classList.remove('active');
+      });
+
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) lightbox.classList.remove('active');
+      });
     });
   </script>
 </body>
